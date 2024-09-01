@@ -1,3 +1,3 @@
 # My First Website 2023
-**[baguettejet.fans](https://baguettejet.fans/)**
+**[baguettejet.com](https://baguettejet.com/)**
 Learning how to create a webiste.
