@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <title>Baguette_Jet</title>
-        <link rel="icon" href="https://i.imgur.com/CdO1Ztk.png">
+        <link rel="icon" href="https://i.imgur.com/CdO1Ztk.png" alt="Baguette_Jet logo">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="mystyle.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Baguette_Jet's Website</h1>
-        <p>Hello and welcome to my super cool website!</p>
+        <p>Hello and welcome to my super cool website!</p>  
         <p>
             This is a working progress<br>
         </p>
@@ -19,17 +19,20 @@
         <div>
             <button onclick="themeMode()", id="themeButton">Dark</button>
         </div>
-        <script>
-            function themeMode() {
-                var element = document.body;
-                let content = document.getElementById("themeButton");
-                if (content.innerText == "Light") content.innerText = "Dark";
-                else content.innerText = "Light"
-                element.classList.toggle("light-mode");
-            }
-        </script>
-
+        
         <h3 class="rainbow_text_animated">COMING SOON</h3>
-        <img class="fit" src="./images/img1.jpg" alt="first image">
+        
+        <img class="fit" src="./img/img1.jpg" alt="graphic design is my passion cat"><br><br><br><br> 
+
+        <div id="parallax", class="parallaxdiv">
+        </div>
+
+
+        <footer>
+            <h2><a href="./stats.html">Stats</a></h2>
+            <p>&copy 2024 footer</p>
+        </footer>
+        <script src="main.js"></script>
+
     </body>
 </html>
