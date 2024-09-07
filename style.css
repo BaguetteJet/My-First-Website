@@ -30,10 +30,9 @@ body {
     margin: 10px;
     padding: 10px;
     display: inline-flex;
-
 }
 /* logo fly parallax */
-.parallaxdiv{
+.parallaxdiv {
     background-image: url(./img/logo.png);
     background-repeat: no-repeat;
     background-size: 100px 100px;
@@ -41,6 +40,7 @@ body {
     background-position-y: 200%;
     width: 100%;
     height: 2000px;
+    min-height: fit-content;
 }
 /* rainbow animated text */
 .rainbow_text_animated {
@@ -52,18 +52,23 @@ body {
     background-size: 400% 100%;
 }
 @keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
+    0%,100% {background-position: 0 0}
+    50% {background-position: 100% 0;}
 }
 /* standard button */
 button {
     cursor: pointer;
 }
 /* links */
+a:link {
+    color: DodgerBlue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:visited {
+    color: DarkOrchid;
+    text-decoration: none;
+}
 a:hover {
     color: cyan;
     font-size: 150%;
@@ -71,7 +76,7 @@ a:hover {
 .inactiveLink {
     pointer-events: none;
     cursor: default;
- }
+}
 /* list */
 ul.a {
     list-style-type: circle;
@@ -88,4 +93,11 @@ ul.a {
     border-color: #ff3399;
     margin: 10px;
     padding: 10px;
+}
+#menu a:hover{
+    font-size: 100%;
+}
+#menu-button {
+    border-style:double;
+    border-color:#ff3399;
 }
