@@ -9,6 +9,7 @@ body {
     background-attachment: fixed;
     background-position: right top;
 }
+/* theme */
 .switch {
     align-items: right;
 }
@@ -16,20 +17,22 @@ body {
     background-color: white;
     color: black;
 }
+/* image fit */
 .fit {
     max-width: 99%;
     max-height: 99%;
 }
-
+/* border */
 .borderD {
     border-width: medium;
     border-style: double;
-    border-color: #ff3399;
+    border-color: lime;
     margin: 10px;
     padding: 10px;
     display: inline-flex;
 
 }
+/* logo fly parallax */
 .parallaxdiv{
     background-image: url(./img/logo.png);
     background-repeat: no-repeat;
@@ -39,6 +42,7 @@ body {
     width: 100%;
     height: 2000px;
 }
+/* rainbow animated text */
 .rainbow_text_animated {
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ffa500, #ff3399,#ff3399);
     -webkit-background-clip: text;
@@ -55,13 +59,33 @@ body {
         background-position: 100% 0;
     }
 }
+/* standard button */
 button {
     cursor: pointer;
 }
+/* links */
 a:hover {
     color: cyan;
     font-size: 150%;
 }
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+/* list */
 ul.a {
     list-style-type: circle;
+}
+/* menu */
+.hidden {
+    display: none;
+}
+#menu{
+    width: 300px;
+    min-width: fit-content;
+    border-width: medium;
+    border-style: double;
+    border-color: #ff3399;
+    margin: 10px;
+    padding: 10px;
 }
