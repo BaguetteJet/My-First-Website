@@ -35,6 +35,29 @@
         
         <img class="fit" src="./img/img1.jpg" alt="graphic design is my passion cat"><br><br><br><br> 
 
+        <p id="visitor-count">Loading visitor count...</p>
+
+        <script>
+          const hitApiUrl = 'https://baguettejetdatabase.glitch.me/hit';
+          const countApiUrl = 'https://baguettejetdatabase.glitch.me/count';
+
+          // Increment the count when the page loads
+          fetch(hitApiUrl)
+            .then(response => response.json())
+            .then(() => {
+              // Fetch the updated count after increment
+              return fetch(countApiUrl);
+            })
+            .then(response => response.json())
+            .then(data => {
+              // Display the updated count
+              document.getElementById('visitor-count').innerText = `Visitor count: ${data.visits}`;
+            })
+            .catch(err => {
+              console.error('Error:', err);
+            });
+        </script>
+
         <div id="parallax", class="parallaxdiv"></div>
 
         <!--location demo-->
