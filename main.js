@@ -69,7 +69,10 @@ function updateVisitorCount() {
   fetch(countApiUrl)
   .then(response => response.json())
   .then(data => {
-    document.getElementById('visitor-count').innerText = `Visitor count: ${data.visits}`;
+    const numberElement = document.getElementById('visitor-count');
+    if (numberElement) {
+      numberElement.innerText = data.visits.toLocaleString(); // format with commas
+    }
   })
   .catch(err => {
     console.error('Error fetching visitor count:', err);
