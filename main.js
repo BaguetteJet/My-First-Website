@@ -5,6 +5,7 @@ window.onload = function() {
     else localStorage.theme = 0;
   }
 }
+
 // theme
 function themeMode() {
   var element = document.body;
@@ -59,5 +60,34 @@ function getLocation() {
 }
 function showPosition(position) {
   locationDemo.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+
+// visitor counter
+const hitApiUrl = 'https://baguettejetdatabase.glitch.me/hit';
+const countApiUrl = 'https://baguettejetdatabase.glitch.me/count';
+function updateVisitorCount() {
+  fetch(countApiUrl)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('visitor-count').innerText = `Visitor count: ${data.visits}`;
+  })
+  .catch(err => {
+    console.error('Error fetching visitor count:', err);
+  });
+}
+if (!sessionStorage.getItem("hasVisited")) {
+  // First visit in this session: increment count
+  fetch(hitApiUrl)
+  .then(response => response.json())
+  .then(() => {
+    sessionStorage.setItem("hasVisited", "true");
+    updateVisitorCount();
+  })
+  .catch(err => {
+    console.error('Error hitting count API:', err);
+  });
+} else {
+  // Already visited in this session: just display count
+  updateVisitorCount();
 }
 
