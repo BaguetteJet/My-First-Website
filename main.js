@@ -5,7 +5,6 @@ window.onload = function() {
     else localStorage.theme = 0;
   }
 }
-
 // theme
 function themeMode() {
   var element = document.body;
@@ -20,7 +19,6 @@ function themeMode() {
   }
   element.classList.toggle("light-mode");
 }
-
 // menu
 const menuButton = document.getElementById('menu-button');
 const menu = document.getElementById('menu');
@@ -32,7 +30,6 @@ document.addEventListener('click', (event) => {
     menu.classList.add('hidden'); // hide menu when click occurs outside menu
   }
 })
-
 // logo parallax
 const parallax = document.getElementById("parallax");
 var distanceToTop = window.scrollY + parallax.getBoundingClientRect().top
@@ -48,20 +45,6 @@ window.addEventListener("scroll", function() {
     parallax.style.backgroundPositionX = window.innerWidth + 2000 + "px";
   }
 })
-
-// location demo
-const locationDemo = document.getElementById("demo");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    locationDemo.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-function showPosition(position) {
-  locationDemo.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-}
-
 // visitor counter
 const hitApiUrl = 'https://baguettejetdatabase.glitch.me/hit';
 const countApiUrl = 'https://baguettejetdatabase.glitch.me/count';
@@ -92,5 +75,37 @@ if (!sessionStorage.getItem("hasVisited")) {
 } else {
   // Already visited in this session: just display count
   updateVisitorCount();
+}
+
+// location demo: Rome coordinates
+const locationDemo = document.getElementById("demo");
+const romeLat = 41.9028;
+const romeLon = 12.4964;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    locationDemo.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+// Haversine formula to calculate distance in kilometers accoriding to chatGPT lol
+function getDistanceFromRome(lat2, lon2) {
+  const R = 6371; // Radius of the Earth in km
+  const lat1 = romeLat * Math.PI / 180;
+  const lon1 = romeLon * Math.PI / 180;
+  const lat2Rad = lat2 * Math.PI / 180;
+  const lon2Rad = lon2 * Math.PI / 180;
+  const dLat = lat2Rad - lat1;
+  const dLon = lon2Rad - lon1;
+  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1) * Math.cos(lat2Rad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c;
+  return distance;
+}
+function showPosition(position) {
+  const userLat = position.coords.latitude;
+  const userLon = position.coords.longitude;
+  const distance = getDistanceFromRome(userLat, userLon);
+  locationDemo.innerHTML = `You are approximately ${distance.toFixed(2)} km from Rome.`;
 }
 

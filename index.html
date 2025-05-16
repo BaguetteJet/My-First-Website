@@ -3,62 +3,50 @@
     <head>
         <title>Baguette_Jet</title>
         <link rel="icon" href="https://i.imgur.com/CdO1Ztk.png" alt="Baguette_Jet logo">
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!--main content-->
+        <!--title content-->
         <h1>Baguette_Jet's Website</h1>
         <p>Hello and welcome to my super cool website!</p>  
         <p>
-            This is a work in progress...<br>
+            working on it :D<br>
         </p>
+
         <!--menu-->
-        <center>
-           <button id="menu-button">&#9776; menu</button>
-           <div id="menu" class="hidden">
-                <span style="line-height: 1.1;font-size:xx-large;"><b>
-                    <span style="color:red">> </span>
-                    <a href="./index">Home</a>
-                    <span style="color:red"> <</span><br>
+        <div class="menu-container">
+            <button id="menu-button">&#9776; menu</button>
+            <div id="menu" class="hidden">
+                <span style="line-height: 1.1; font-size: xx-large;">
+                <b>
+                    <span style="color:red;">&gt;</span>
+                    <a href="./">Home</a>
+                    <span style="color:red;"> &lt;</span><br>
                     <a href="./about">About</a><br>
                     <a href="./stats">Stats</a><br>
-                </b></span><br>
-                <button onclick="themeMode()", id="themeButton">Dark</button><b> theme</b>
+                </b>
+                </span><br>
+                <button onclick="themeMode()" id="themeButton">Dark</button><b> theme</b>
             </div>
-        </center>
+        </div>
         
+        <!--coming soon and graphic-->
         <h3 class="rainbow_text_animated">COMING SOON</h3>
-        
         <img class="fit" src="./img/img1.jpg" alt="graphic design is my passion cat"><br><br><br><br> 
 
+        <!--visitor counter-->
         <p id="visitor-count" style="font-size: 3em; font-weight: bold; margin-bottom: 0;">...</p>
-        <p id="visitor-label" style="margin-top: 0;">visited since May 2025</p>
+        <p id="visitor-label" style="margin-top: 0;">visits since May 2025</p>
 
+        <!--parralax-->
         <div id="parallax", class="parallaxdiv"></div>
 
         <!--location demo-->
-        <p>Click the button to get your coordinates.</p>
-        <button onclick="getLocation()">Try It</button>
-
+        <p>How far are you from Rome?</p>
+        <button onclick="getLocation()">Check</button>
         <p id="demo"></p>
-        <script>
-            const x = document.getElementById("demo");
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else { 
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-            function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-            }
-        </script>
 
         <!--footer-->
         <footer>
@@ -66,6 +54,5 @@
             <p>&copy 2024 footer</p>
         </footer>
         <script src="main.js"></script>
-
     </body>
 </html>

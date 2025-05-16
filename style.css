@@ -1,13 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-
     background-color: black;
     color: white;
-
     background-image: url("./img/samplebackground.png");
     background-attachment: fixed;
     background-position: right top;
+    padding-top: 20px; /* Prevent content from hiding behind the fixed bar */
 }
 /* theme */
 .switch {
@@ -101,3 +100,9 @@ ul.a {
     border-style:double;
     border-color:#ff3399;
 }
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;  
+  }
