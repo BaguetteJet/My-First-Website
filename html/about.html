@@ -5,14 +5,11 @@
         <link rel="icon" href="https://i.imgur.com/CdO1Ztk.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <!--main content-->
         <h1>Are you curious?</h1>
-        <p>
-            Do you want to know?<br>
-        </p>
 
         <!--menu-->
         <div class="menu-container">
@@ -35,9 +32,19 @@
         <br>
         <div id="parallax" class="parallaxdiv">
             <p>
-                <button disabled>Yes</button>
-                <button>No</button>
+            Do you want to know?<br>
             </p>
+            <p>
+                <button onclick="document.getElementById('about text').style.display = 'block';">Yes</button>
+                <button disabled>No</button>
+            </p>
+            <p id="about text" class="centered-paragraph-hidden"> <br>
+            2023 - I began this website project to learn how websites work. My first website was first hosted for free on 000webhost.com. It was a blank page with "coming soon" text and a "graphic design is my passion" meme. Following a tutorial I added a rainbow animation to the "coming soon" text. I bought my first domain baguettejet.fan, but couldn't get the SSL certificate to work so it stayed as a http website.  <br><br>
+            2024 - After a long break, I returned and found 000webhost.com was shut down. I moved to hosting for free on GitHub.com, bought the domain baguettejet.com and secured the site to https. There were many improvements and additions made. Multiple pages, custom menu, and styling. I felt so proud making a baguette jet logo fly across the screen and have the website theme be not only toggleable but also saved. <br><br>
+            2025 - Many months passed before I came back to this project. I added a few details and created a visitor counter that was hosted on glitch.io. It used an API to read and write data to a .json file and updated as new users visited the site. Weeks later, glitch.io had shut down and I returned to recreate it using firebase.google.com. It was far better and more responsive.  <br><br>
+            2026 - not quite there yet <br><br>
+            <br>
+        </p>
         </div>
 
         <!--footer-->
@@ -45,7 +52,7 @@
             <h2><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">code</a></h2>
             <p>&copy 2024 footer</p>
         </footer>
-        <script src="main.js"></script>
+        <script src="../js/main.js"></script>
 
     </body>
 </html>

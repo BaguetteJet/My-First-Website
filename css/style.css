@@ -105,4 +105,15 @@ ul.a {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;  
-  }
+}
+.centered-paragraph {
+    width: 40em;
+    margin: 0 auto;
+    text-align: left;
+}
+.centered-paragraph-hidden {
+    width: 40em;
+    margin: 0 auto;
+    text-align: left;
+    display: none;
+}

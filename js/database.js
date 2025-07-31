@@ -1,6 +1,6 @@
 // Google Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyCcYiHY75iQNtyjziSVQjYLP-JW1sxKQqU",
+    apiKey: "AIzaSyCcYiHY75iQNtyjziSVQjYLP-JW1sxKQqU", //API key is harmless
     authDomain: "basic-database-for-website.firebaseapp.com",
     databaseURL: "https://basic-database-for-website-default-rtdb.europe-west1.firebasedatabase.app/",
     projectId: "basic-database-for-website",
