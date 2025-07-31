@@ -3,6 +3,12 @@
 Learning how to create a webiste.
 - work in progress
 
+Learning Sources:
+- w3schools.com tutorials
+- youtube.com tutorials
+- stackoverflow.com
+- LLMs (mostly ChatGPT)
+
 Want to add:
 - live data
 - better menu
@@ -11,5 +17,5 @@ Added:
 - menu
 - saving theme
 - pages
-- visit counter
+- visit counter (switched from glitch.io to firebase.google.com)
 
