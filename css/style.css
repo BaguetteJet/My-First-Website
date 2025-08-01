@@ -107,12 +107,14 @@ ul.a {
     margin: 0 auto;  
 }
 .centered-paragraph {
-    width: 40em;
+    width: 100%;
+    max-width: 40em;
     margin: 0 auto;
     text-align: left;
 }
 .centered-paragraph-hidden {
-    width: 40em;
+    width: 100%;
+    max-width: 40em;
     margin: 0 auto;
     text-align: left;
     display: none;
