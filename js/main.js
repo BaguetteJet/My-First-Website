@@ -20,16 +20,16 @@ function themeMode() {
 	element.classList.toggle("light-mode");
 }
 // menu
-const menuButton = document.getElementById('menu-button');
-const menu = document.getElementById('menu');
+const menuButton = document.querySelector('.menu-button');
+const menu = document.querySelector('.menu');
 menuButton.addEventListener('click', () => {
-  	menu.classList.toggle('hidden'); // show/hide menu when button clicked
-})
+  menu.classList.toggle('show'); // show/hide menu when button clicked
+});
 document.addEventListener('click', (event) => {
-  	if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
-    	menu.classList.add('hidden'); // hide menu when click occurs outside menu
-  	}
-})
+  if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+    menu.classList.add('hidden'); // hide menu when click occurs outside menu
+  }
+});
 // logo parallax
 const parallax = document.getElementById("parallax");
 var distanceToTop = window.scrollY + parallax.getBoundingClientRect().top

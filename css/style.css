@@ -6,7 +6,32 @@ body {
     background-image: url("../img/samplebackground.png");
     background-attachment: fixed;
     background-position: right top;
-    padding-top: 20px; /* Prevent content from hiding behind the fixed bar */
+    padding-top: 1em; /* Prevent content from hiding behind the fixed bar */
+}
+.hidden {
+    display: none;
+}
+/* links */
+button {
+    cursor: pointer;
+}
+a:link {
+    color: DodgerBlue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:visited {
+    color: DarkOrchid;
+    text-decoration: none;
+}
+a:hover {
+    color: cyan;
+    font-size: 150%;
+    line-height: 0;
+}
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
 }
 /* theme */
 .switch {
@@ -54,49 +79,24 @@ body {
     0%,100% {background-position: 0 0}
     50% {background-position: 100% 0;}
 }
-/* standard button */
-button {
-    cursor: pointer;
-}
-/* links */
-a:link {
-    color: DodgerBlue;
-    text-decoration: none;
-    transition: 0.2s;
-}
-a:visited {
-    color: DarkOrchid;
-    text-decoration: none;
-}
-a:hover {
-    color: cyan;
-    font-size: 150%;
-}
-.inactiveLink {
-    pointer-events: none;
-    cursor: default;
-}
-/* list */
-ul.a {
-    list-style-type: circle;
-}
-/* menu */
-.hidden {
+/* main menu */
+.menu{
     display: none;
-}
-#menu{
-    width: 300px;
+    width: 17em;
     min-width: fit-content;
     border-width: medium;
     border-style: double;
     border-color: #ff3399;
-    margin: 10px;
-    padding: 10px;
+    margin: 0.7em;
+    padding: 0.7em;  
 }
-#menu a:hover{
+.menu.show{
+    display: block;
+}
+.menu a:hover{
     font-size: 100%;
 }
-#menu-button {
+.menu-button {
     border-style:double;
     border-color:#ff3399;
 }
@@ -108,14 +108,20 @@ ul.a {
 }
 .centered-paragraph {
     width: 100%;
-    max-width: 40em;
+    max-width: 45em;
     margin: 0 auto;
     text-align: left;
 }
 .centered-paragraph-hidden {
     width: 100%;
-    max-width: 40em;
+    max-width: 45em;
     margin: 0 auto;
     text-align: left;
     display: none;
+}
+iframe {
+    width: 100%;
+    max-width: 45em;
+    height: 30em;
+    border: none;
 }
