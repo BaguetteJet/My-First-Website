@@ -7,7 +7,6 @@ Learning Sources:
 - w3schools.com tutorials
 - youtube.com tutorials
 - stackoverflow.com
-- LLMs (mostly ChatGPT)
 
 Want to add:
 - live data
